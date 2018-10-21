@@ -27,14 +27,14 @@
                             @csrf
 
                             <div class="form-group row">
-                                <label for="teamname" class="col-md-4 col-form-label text-md-right">{{ __('Team Name') }}</label>
+                                <label for="team_name" class="col-md-4 col-form-label text-md-right">{{ __('Team Name') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="teamname" type="text" class="form-control{{ $errors->has('teamname') ? ' is-invalid' : '' }}" teamname="teamname" value="{{ old('teamname') }}" required autofocus>
+                                    <input id="team_name" type="text" class="form-control{{ $errors->has('team_name') ? ' is-invalid' : '' }}" name="team_name" value="{{ old('team_name') }}" required autofocus>
 
-                                    @if ($errors->has('teamname'))
+                                    @if ($errors->has('team_name'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('teamname') }}</strong>
+                                        <strong>{{ $errors->first('team_name') }}</strong>
                                     </span>
                                     @endif
                                 </div>

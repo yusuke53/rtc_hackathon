@@ -37,12 +37,17 @@ class ApiTestController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
         $rapid = new RapidApiConnect("default-application_5bc7d447e4b08725af2a7b23", "494450e4-a9a2-4a9d-b89b-6efe8d6b57fa");
 
         $rapid->call('Github', 'createRepository', [
             "accessToken" => "3e66fda71424b197d8510adc680322a89127c41c",
-            "name" => "TestRepository"
+            "name" => $request->team_name
+        ]);
+
+        $rapid->call('Github', 'addRepositoryCollaborator', [
+            "accessToken" => "3e66fda71424b197d8510adc680322a89127c41c",
+            "user" => $request->email2,
+            "repositoryName" => $request->team_name
         ]);
 
         return view('welcome');

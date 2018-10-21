@@ -11,11 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'ApiTestController@index');
 Route::resource('test', 'ApiTestController');
-//
+
 Auth::routes();
-//
-//Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('login/github', 'Auth\LoginController@redirectToProvider')->name('login.github');
+Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallback')->name('login.github2');
+

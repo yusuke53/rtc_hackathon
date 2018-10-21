@@ -68,6 +68,20 @@
                                 </div>
                             </div>
 
+                            <div class="form-group row">
+                                <label for="access_token" class="col-md-4 col-form-label text-md-right">{{ __('Access Token') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="access_token" type="text" class="form-control{{ $errors->has('access_token') ? ' is-invalid' : '' }}" name="access_token" value="{{ $user->token }}" required>
+
+                                    @if ($errors->has('access_token'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('access_token') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
@@ -76,7 +90,7 @@
                                 </div>
                             </div>
                         </form>
-                        <a href="{{ route('login.github') }}">GitHub</a>
+                        <a href="{{ route('login.github') }}">GitHub</a>S
                     </div>
                 </div>
             </div>

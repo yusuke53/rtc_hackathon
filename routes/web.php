@@ -18,5 +18,5 @@ Route::resource('test', 'ApiTestController');
 Auth::routes();
 
 Route::get('login/github', 'Auth\LoginController@redirectToProvider')->name('login.github');
-Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallback')->name('login.github2');
+Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallback');
 

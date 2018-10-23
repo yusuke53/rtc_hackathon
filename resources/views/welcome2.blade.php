@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                         </form>
-                        <a href="{{ route('login.github') }}">GitHub</a>S
+                        <a href="{{ route('login.github') }}">GitHub</a>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,20 @@
+{
+    "name": "rapidapi/rapidapi-connect",
+    "description": "Connect to blocks on the rapidapi.com marketplace",
+    "require": {
+        "php": "^5.3.3 || ^7.0",
+        "ratchet/pawl": "^0.2.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Shumytskyi",
+            "email": "d.shumytskyi@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "RapidApi\\": "src/"
+        }
+    }
+}

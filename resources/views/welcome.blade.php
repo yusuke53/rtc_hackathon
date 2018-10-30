@@ -117,7 +117,7 @@
                         </form>
                         <a href="{{ route('login.github') }}">GitHub</a>
                         <button onclick="add();">Collaboratorを追加する</button>
-<!--                        <button onclick="delete();">Collaboratorを削除する</button>-->
+                        <button onclick="delete();">Collaboratorを削除する</button>
                     </div>
                 </div>
             </div>
